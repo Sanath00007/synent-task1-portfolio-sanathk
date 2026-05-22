@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanath — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading-screen">
+  <!-- AMBIENT BG GLOWS -->
+  <div class="loader-bg-glow"></div>
+
+  <!-- HUD VIEWPORT FRAMES -->
+  <div class="hud-corner hud-tl"></div>
+  <div class="hud-corner hud-tr"></div>
+  <div class="hud-corner hud-bl"></div>
+  <div class="hud-corner hud-br"></div>
+
+  <!-- SIDE STATUS WATERMARKS -->
+  <div class="loader-side-label label-left">SYS_CORE_ACTIVE // PORT_2026</div>
+  <div class="loader-side-label label-right">INITIALIZING_DIGITAL_SPACE</div>
+
+  <div class="loading-header-bar">
+    <a href="#" class="loader-title">SANATH</a>
+    <div class="loading-status-indicator">
+      <span class="status-pulse"></span>
+      <span class="status-lbl">ONLINE</span>
+    </div>
+  </div>
+
+  <div class="loading-marquee-wrap">
+    <div class="loading-marquee-inner">
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+      <span>SANATH'S PORTFOLIO</span>
+    </div>
+  </div>
+
+  <div class="bike-loader-container" id="bikeLoaderContainer">
+    <div class="bike-track">
+      <div class="bike-progress-line" id="bikeProgressLine"></div>
+      <div class="bike-wrapper" id="bikeWrapper">
+        <svg class="bike-svg" viewBox="0 0 50 30" width="50" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <g class="bike-svg-body">
+            <!-- Engine/Body detail -->
+            <path d="M 18 20 L 26 20 L 28 15 L 20 15 Z" fill="currentColor" opacity="0.15" stroke="none" />
+            <!-- Rear Swingarm -->
+            <line x1="10" y1="22" x2="20" y2="20" />
+            <!-- Main Frame & Gas Tank -->
+            <path d="M 12 16 L 20 16 C 22 14, 25 11, 29 11 L 34 11 C 36 11, 37 12, 38 14 L 40 22" />
+            <!-- Handlebar & Fork -->
+            <line x1="36" y1="9" x2="33" y2="9" />
+            <line x1="35" y1="9" x2="38" y2="14" />
+            <line x1="38" y1="14" x2="40" y2="22" />
+            <!-- Exhaust -->
+            <line x1="12" y1="22" x2="6" y2="18" stroke-width="1.2" />
+            <!-- Seat cowl -->
+            <path d="M 12 16 L 8 13 L 14 13 Z" fill="currentColor" stroke="none" opacity="0.4" />
+          </g>
+          <!-- Rear Wheel -->
+          <g class="wheel">
+            <circle cx="10" cy="22" r="6.5" />
+            <circle cx="10" cy="22" r="4.5" stroke-dasharray="3,3" class="spinning-wheel-rear" />
+          </g>
+          <!-- Front Wheel -->
+          <g class="wheel">
+            <circle cx="40" cy="22" r="6.5" />
+            <circle cx="40" cy="22" r="4.5" stroke-dasharray="3,3" class="spinning-wheel-front" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!-- Dynamic high-fidelity status ticker -->
+    <div class="loading-status-text" id="loadingStatusText">Initialising core system modules...</div>
+  </div>
+
+  <div class="loading-wrap" id="loadingWrap">
+    <div class="loading-hover" id="loadingHover"></div>
+    <div class="loading-button" id="loadingBtn">
+      <div class="loading-content" id="loadingContent">
+        <div class="loading-content-in">
+          LOADING <span id="loadPercent">0%</span>
+          <div class="loading-box"></div>
+        </div>
+      </div>
+      <div class="loading-content2" id="loadingContent2" style="display:none;">
+        <span>WELCOME</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CUSTOM CURSOR ===== -->
+<div id="cursor"></div>
+
+<!-- ===== MAIN ===== -->
+<main id="main-content" style="opacity:0;">
+
+  <!-- GLOBAL BACKGROUND WATERMARKS -->
+  <div class="side-watermark watermark-left">DEVELOPER</div>
+  <div class="side-watermark watermark-right">DESIGNER</div>
+
+  <!-- NAV -->
+  <div class="header">
+    <a href="#" class="navbar-title" id="navLogo">SANATH</a>
+    <a href="mailto:sanathk00007@gmail.com" class="navbar-connect">sanathk00007@gmail.com</a>
+    <ul>
+      <li><a href="#about">
+        <div class="hover-link"><div class="hover-in">ABOUT<div>ABOUT</div></div></div>
+      </a></li>
+      <li><a href="#work">
+        <div class="hover-link"><div class="hover-in">PROJECTS<div>PROJECTS</div></div></div>
+      </a></li>
+      <li><a href="#certificates">
+        <div class="hover-link"><div class="hover-in">CERTIFICATES<div>CERTIFICATES</div></div></div>
+      </a></li>
+      <li><a href="#contact">
+        <div class="hover-link"><div class="hover-in">CONTACT<div>CONTACT</div></div></div>
+      </a></li>
+    </ul>
+  </div>
+
+  <!-- GLOW CIRCLES + NAV FADE -->
+  <div class="landing-circle1"></div>
+  <div class="landing-circle2"></div>
+  <div class="nav-fade"></div>
+
+  <!-- SOCIAL ICONS -->
+  <div class="icons-section">
+    <div class="social-icons" id="social">
+      <span>
+        <a href="https://github.com/Sanath00007" target="_blank" title="GitHub">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+        </a>
+      </span>
+      <span>
+        <a href="https://linkedin.com/in/sanath-k-b69369291" target="_blank" title="LinkedIn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </span>
+      <span>
+        <a href="https://leetcode.com/u/Sanath_K/" target="_blank" title="LeetCode">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M16.102 17.93l-2.697 2.607c-.466.451-1.211.451-1.677 0l-4.51-4.359a2.536 2.536 0 0 1 0-3.627l4.51-4.36a1.184 1.184 0 0 1 1.677 0l2.697 2.607c.466.45.466 1.171 0 1.621l-2.697 2.607a1.184 1.184 0 0 1-1.677 0l-1.02-1.002a.855.855 0 0 0-1.196 0 .81.81 0 0 0 0 1.16l1.02 1.002c1.196 1.161 3.136 1.161 4.332 0l2.697-2.607c.466-.451.466-1.17 0-1.62l-2.697-2.602c-.466-.452-1.211-.452-1.677 0l-4.51 4.359a1.184 1.184 0 0 0 0 1.62l4.51 4.36c.466.45.466 1.171 0 1.62z"/></svg>
+        </a>
+      </span>
+      <span>
+        <a href="https://www.skills.google/public_profiles/c0b5bbb6-6173-4927-9a32-f6c9a977853f" target="_blank" title="Google Cloud Profile">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+        </a>
+      </span>
+      <span>
+        <a href="https://x.com/Sanath_00007" target="_blank" title="Twitter">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.737-8.835L1.254 2.25H8.08l4.259 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </span>
+      <span>
+        <a href="https://www.instagram.com/_sanath_07/" target="_blank" title="Instagram">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </span>
+    </div>
+    <a class="resume-button" href="#">
+      <div class="hover-link"><div class="hover-in">RESUME<div>RESUME</div></div></div>
+    </a>
+  </div>
+
+  <!-- ===== LANDING ===== -->
+  <div class="landing-section" id="home">
+    <div class="landing-container">
+      <div class="landing-watermark">CREATIVE</div>
+      <div class="landing-intro">
+        <h2>Hello! I'm</h2>
+        <h1>SANATH<br><span>Kondalakana</span></h1>
+      </div>
+      <div class="landing-image-container">
+        <img src="img.png" class="landing-image" alt="Hero Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <div class="about-section" id="about">
+    <div class="about-container section-container">
+      <!-- LEFT: High-Fidelity Cyber Terminal / Stats Card -->
+      <div class="about-visual reveal">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">system_diagnostics.sh</div>
+          </div>
+          <div class="terminal-body">
+            <div class="term-row"><span class="term-lbl">usr:</span> <span class="term-val">sanath@core-node</span></div>
+            <div class="term-row"><span class="term-lbl">loc:</span> <span class="term-val">Karnataka, India</span></div>
+            <div class="term-row"><span class="term-lbl">role:</span> <span class="term-val">Creative Dev & Designer</span></div>
+            <div class="term-row"><span class="term-lbl">focus:</span> <span class="term-val">[ "Full-Stack", "ML_Inference", "Cloud_Systems" ]</span></div>
+            <div class="term-row"><span class="term-lbl">gcp_cloud:</span> <span class="term-val">"30+ Arcade Points (2026)"</span></div>
+            <div class="term-row"><span class="term-lbl">leetcode:</span> <span class="term-val">"100+ Active Days (Java)"</span></div>
+            <div class="term-row"><span class="term-lbl">status:</span> <span class="term-val state-active">ACTIVE_BOOT_SEQUENCE</span></div>
+            <div class="term-prompt"><span class="term-cursor">></span> <span class="term-typed">npm run create-magic</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT: Text Narrative -->
+      <div class="about-me reveal">
+        <h3>About Me</h3>
+        <h2>Turning complex computational logic into <span>exceptional digital realities</span>.</h2>
+        <p>
+          I am a Computer Science engineering student at VCET and an active full-stack developer. I combine advanced academic foundations with hands-on building—focusing on machine learning systems for COPD disease detection utilizing Python and FastAPI as a primary priority, alongside production-level medical portals like <strong>mediq.io</strong> powered by React and Supabase.
+        </p>
+        <p class="about-sub">
+          Backed by verified expertise including an elite NPTEL certification in Python and a Web Development Internship at Elewayte, I engineer software that is robust, efficient, and premium by design.
+        </p>
+        <p class="about-sub">
+          I am deeply passionate about cloud architecture and algorithmic problem-solving. This is backed by my <a href="https://www.skills.google/public_profiles/c0b5bbb6-6173-4927-9a32-f6c9a977853f" target="_blank" style="color: #c2a4ff; text-decoration: none; border-bottom: 1px dashed rgba(194, 164, 255, 0.4); font-weight: 500;">Google Cloud Profile</a> with <strong>30+ Arcade Points (2026)</strong> and my <a href="https://leetcode.com/u/Sanath_K/" target="_blank" style="color: #c2a4ff; text-decoration: none; border-bottom: 1px dashed rgba(194, 164, 255, 0.4); font-weight: 500;">LeetCode Profile</a> showcasing over <strong>100+ active days</strong> of dedicated problem solving in <strong>Java</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHAT I DO ===== -->
+  <div class="whatIDO">
+    <div class="what-box">
+      <h2 class="title">
+        W<span class="hat-h2">HAT</span>
+        <div>I<span class="do-h2"> DO</span></div>
+      </h2>
+    </div>
+    <div class="what-box">
+      <div class="what-box-in">
+        <div class="what-border2">
+          <svg width="100%">
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="white" stroke-width="2" stroke-dasharray="7,7"/>
+            <line x1="100%" y1="0" x2="100%" y2="100%" stroke="white" stroke-width="2" stroke-dasharray="7,7"/>
+          </svg>
+        </div>
+        <div class="what-content">
+          <div class="what-border1">
+            <svg height="100%">
+              <line x1="0" y1="0" x2="100%" y2="0" stroke="white" stroke-width="2" stroke-dasharray="6,6"/>
+              <line x1="0" y1="100%" x2="100%" y2="100%" stroke="white" stroke-width="2" stroke-dasharray="6,6"/>
+            </svg>
+          </div>
+          <div class="what-corner"></div>
+          <div class="what-content-in">
+            <h3>FULL-STACK DEV</h3>
+            <h4>Description</h4>
+            <p>Engineering highly interactive web applications, responsive architectures, and secure database backends. Specialized in React.js component design, Supabase database mapping, REST APIs, and client-side performance optimization.</p>
+            <h5>Skillset & tools</h5>
+            <div class="what-content-flex">
+              <div class="what-tags">React.js</div>
+              <div class="what-tags">JavaScript</div>
+              <div class="what-tags">Supabase</div>
+              <div class="what-tags">FastAPI</div>
+              <div class="what-tags">HTML5 & CSS3</div>
+              <div class="what-tags">Flask</div>
+              <div class="what-tags">Git & GitHub</div>
+              <div class="what-tags">UI/UX Design</div>
+            </div>
+            <div class="what-arrow"></div>
+          </div>
+        </div>
+
+        <div class="what-content">
+          <div class="what-border1">
+            <svg height="100%">
+              <line x1="0" y1="100%" x2="100%" y2="100%" stroke="white" stroke-width="2" stroke-dasharray="6,6"/>
+            </svg>
+          </div>
+          <div class="what-corner"></div>
+          <div class="what-content-in">
+            <h3>AI & CLOUD DEV</h3>
+            <h4>Description</h4>
+            <p>Building predictive machine learning models, deploying cloud-enabled services, and developing robust backends. Specialized in Python scripting, Google Cloud systems, Linux command-line operations, database design, and advanced algorithmic problem solving.</p>
+            <h5>Skillset & tools</h5>
+            <div class="what-content-flex">
+              <div class="what-tags">Python</div>
+              <div class="what-tags">Google Cloud</div>
+              <div class="what-tags">Linux Shell</div>
+              <div class="what-tags">Java</div>
+              <div class="what-tags">C++</div>
+              <div class="what-tags">DSA</div>
+              <div class="what-tags">SQL</div>
+              <div class="what-tags">Algorithms</div>
+            </div>
+            <div class="what-arrow"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CAREER ===== -->
+  <div class="career-section section-container" id="career">
+    <h2>My education <span>&</span><br>milestones</h2>
+    <div class="career-info">
+      <div class="career-timeline" id="careerTimeline">
+        <div class="career-dot"></div>
+      </div>
+      <div class="career-info-box reveal">
+        <div class="career-info-in">
+          <div class="career-role">
+            <h4>Schooling (1st - 10th)</h4>
+            <h5>Vivekananda English Medium School Tenkila, Puttur</h5>
+          </div>
+          <h3>2011-21</h3>
+        </div>
+        <p>Completed primary and secondary school education, developing a strong foundation in science, mathematics, and extracurricular activities.</p>
+      </div>
+      <div class="career-info-box reveal">
+        <div class="career-info-in">
+          <div class="career-role">
+            <h4>Pre-University (I PU - II PU)</h4>
+            <h5>Vivekananda Pre-University College Nagara, Puttur</h5>
+          </div>
+          <h3>2021-23</h3>
+        </div>
+        <p>Pursued Pre-University education focusing on core science streams, including Physics, Chemistry, Mathematics, and Computer Science, laying the groundwork for advanced engineering studies.</p>
+      </div>
+      <div class="career-info-box reveal">
+        <div class="career-info-in">
+          <div class="career-role">
+            <h4>B.E. in Computer Science</h4>
+            <h5>Vivekananda College of Engineering and Technology Nagara, Puttur</h5>
+          </div>
+          <h3>2023-27</h3>
+        </div>
+        <p>Currently pursuing a Bachelor of Engineering in Computer Science & Engineering. Actively exploring software architecture, web development technologies, data structures, and algorithmic frameworks.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WORK ===== -->
+  <div class="work-section" id="work">
+    <div class="work-container section-container">
+      <h2>My <span>Projects</span></h2>
+      <div class="work-flex" id="workFlex">
+        <!-- Work boxes: 5 real projects, alternating layout built-in via CSS -->
+        <div class="work-box">
+          <div class="work-info">
+            <div class="work-decal">SYS_NODE // INFERENCE_ACTIVE</div>
+            <div class="work-title">
+              <h3>01</h3>
+              <div><h4>COPD Diagnostics</h4><p>Machine Learning</p></div>
+            </div>
+            <h4>Tools and features</h4>
+            <p>Python, FastAPI, Scikit-Learn, Medical Dataset</p>
+          </div>
+          <div class="work-image">
+            <div class="work-image-in">
+              <div class="work-img-placeholder copd">
+                <div class="mock-hdr">
+                  <span class="mock-dot green"></span>
+                  <span class="mock-lbl">DIAGNOSTIC_ANALYZER // ML_INFERENCE</span>
+                </div>
+                <div class="mock-body">
+                  <div class="radar-container">
+                    <div class="radar-grid"></div>
+                    <div class="radar-sweep"></div>
+                    <div class="radar-target target-1"></div>
+                    <div class="radar-target target-2"></div>
+                  </div>
+                  <div class="mock-data-row">
+                    <div class="mock-stat">
+                      <span class="mock-stat-lbl">MODEL STATE</span>
+                      <span class="mock-stat-val text-green">INFERENCE</span>
+                    </div>
+                    <div class="mock-stat">
+                      <span class="mock-stat-lbl">ENGINE</span>
+                      <span class="mock-stat-val text-green">FAST_API</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-footer">
+                  <span>MODEL STATE: DEV</span>
+                  <span>TEST_SUITE: READY</span>
+                </div>
+              </div>
+              <a href="https://github.com/Rajath2005/COPD" target="_blank" class="work-link">↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <div class="work-info">
+            <div class="work-decal">SYS_NODE // PRODUCTION_HOST</div>
+            <div class="work-title">
+              <h3>02</h3>
+              <div><h4>mediq.io</h4><p>Web Platform</p></div>
+            </div>
+            <h4>Tools and features</h4>
+            <p>React, Supabase, Geolocation, QR Scanning</p>
+          </div>
+          <div class="work-image">
+            <div class="work-image-in">
+              <div class="work-img-placeholder mediq">
+                <div class="mock-hdr">
+                  <span class="mock-dot purple"></span>
+                  <span class="mock-lbl">SYS_CLINIC_CONNECTED // DB_SECURE</span>
+                </div>
+                <div class="mock-body">
+                  <div class="ecg-track">
+                    <div class="ecg-grid"></div>
+                    <svg class="ecg-svg" viewBox="0 0 400 60">
+                      <path class="ecg-path" d="M 0 30 L 80 30 L 90 10 L 100 50 L 110 30 L 180 30 L 190 20 L 195 40 L 200 30 L 280 30 L 290 5 L 300 55 L 310 30 L 400 30" fill="none" stroke="#c2a4ff" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="mock-data-row">
+                    <div class="mock-stat">
+                      <span class="mock-stat-lbl">HEART RATE</span>
+                      <span class="mock-stat-val clinic-pulse">72 <span class="unit">BPM</span></span>
+                    </div>
+                    <div class="mock-stat">
+                      <span class="mock-stat-lbl">DB NODE</span>
+                      <span class="mock-stat-val text-violet">SUPABASE</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-footer">
+                  <span>REMEDY_SEARCH_ACTIVE</span>
+                  <span>GPS_OK // PUTTUR_NODE</span>
+                </div>
+              </div>
+              <a href="https://github.com/Rajath2005/mediq.io" target="_blank" class="work-link">↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <div class="work-info">
+            <div class="work-decal">SYS_NODE // SYSTEM_UTILITY</div>
+            <div class="work-title">
+              <h3>03</h3>
+              <div><h4>To-Do List</h4><p>Productivity Tool</p></div>
+            </div>
+            <h4>Tools and features</h4>
+            <p>JavaScript, HTML5, CSS3, LocalStorage Sync</p>
+          </div>
+          <div class="work-image">
+            <div class="work-image-in">
+              <div class="work-img-placeholder todo">
+                <div class="mock-hdr">
+                  <span class="mock-dot cyan"></span>
+                  <span class="mock-lbl">LOCAL_DATABASE_CONSOLE // CRUD</span>
+                </div>
+                <div class="mock-body">
+                  <div class="todo-list-mock">
+                    <div class="todo-item-mock checked">
+                      <div class="checkbox-mock">✓</div>
+                      <span>COMPILE_SYSTEM_CORE</span>
+                    </div>
+                    <div class="todo-item-mock checked">
+                      <div class="checkbox-mock">✓</div>
+                      <span>ESTABLISH_STORAGE_LINK</span>
+                    </div>
+                    <div class="todo-item-mock">
+                      <div class="checkbox-mock"></div>
+                      <span>DEPLOY_TO_PRODUCTION</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-lbl">STACK_INTEGRATION</div>
+                    <div class="progress-bar-track">
+                      <div class="progress-bar-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-footer">
+                  <span>LOCAL_STORAGE: SYNC_OK</span>
+                  <span>ITEMS // 3_ACTIVE</span>
+                </div>
+              </div>
+              <a href="https://github.com/Sanath00007/to-do-list-" target="_blank" class="work-link">↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <div class="work-info">
+            <div class="work-decal">SYS_NODE // FRONTEND_RENDER</div>
+            <div class="work-title">
+              <h3>04</h3>
+              <div><h4>MENU</h4><p>UI/UX Design</p></div>
+            </div>
+            <h4>Tools and features</h4>
+            <p>React, CSS Grid, Dynamic DOM Filtering</p>
+          </div>
+          <div class="work-image">
+            <div class="work-image-in">
+              <div class="work-img-placeholder menu-proj">
+                <div class="mock-hdr">
+                  <span class="mock-dot sunset"></span>
+                  <span class="mock-lbl">DYNAMIC_UI_FILTER // CLIENT_RENDER</span>
+                </div>
+                <div class="mock-body">
+                  <div class="menu-categories-mock">
+                    <span class="cat-pill active">ALL</span>
+                    <span class="cat-pill">DESSERTS</span>
+                    <span class="cat-pill">MAINS</span>
+                  </div>
+                  <div class="menu-cards-mock">
+                    <div class="menu-card-mock">
+                      <div class="card-img-mock"></div>
+                      <div class="card-text-mock">
+                        <div class="card-title-mock"></div>
+                        <div class="card-desc-mock"></div>
+                      </div>
+                    </div>
+                    <div class="menu-card-mock offset-card">
+                      <div class="card-img-mock"></div>
+                      <div class="card-text-mock">
+                        <div class="card-title-mock"></div>
+                        <div class="card-desc-mock"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-footer">
+                  <span>DOM_ELEMENTS: DYNAMIC</span>
+                  <span>STATE_REFRESH // 0ms</span>
+                </div>
+              </div>
+              <a href="https://github.com/Sanath00007/MENU" target="_blank" class="work-link">↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-box">
+          <div class="work-info">
+            <div class="work-decal">SYS_NODE // CLIENT_AUDIO</div>
+            <div class="work-title">
+              <h3>05</h3>
+              <div><h4>Englisho</h4><p>EdTech Application</p></div>
+            </div>
+            <h4>Tools and features</h4>
+            <p>HTML5, Web Audio API, TTS speech engines</p>
+          </div>
+          <div class="work-image">
+            <div class="work-image-in">
+              <div class="work-img-placeholder englisho">
+                <div class="mock-hdr">
+                  <span class="mock-dot gold"></span>
+                  <span class="mock-lbl">SPEECH_FREQUENCIES // AUDIO_INPUT</span>
+                </div>
+                <div class="mock-body">
+                  <div class="equalizer-container">
+                    <div class="eq-bar bar-1"></div>
+                    <div class="eq-bar bar-2"></div>
+                    <div class="eq-bar bar-3"></div>
+                    <div class="eq-bar bar-4"></div>
+                    <div class="eq-bar bar-5"></div>
+                    <div class="eq-bar bar-6"></div>
+                    <div class="eq-bar bar-7"></div>
+                    <div class="eq-bar bar-8"></div>
+                  </div>
+                  <div class="pronunciation-gauge">
+                    <span class="gauge-lbl">PRONUNCIATION SCORE</span>
+                    <span class="gauge-val text-gold">96% MATCH</span>
+                  </div>
+                </div>
+                <div class="mock-footer">
+                  <span>TTS_PLAYBACK: ACTIVE</span>
+                  <span>AUDIO_NODE // READY</span>
+                </div>
+              </div>
+              <a href="https://github.com/Sanath00007/Englisho" target="_blank" class="work-link">↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TECH STACK ===== -->
+  <div class="techstack">
+    <h2>Tech Stack</h2>
+    <div class="tech-marquee-row">
+      <div class="tech-marquee-inner">
+        <div class="tech-item"><div class="tech-dot"></div>C</div>
+        <div class="tech-item"><div class="tech-dot"></div>C++</div>
+        <div class="tech-item"><div class="tech-dot"></div>Java</div>
+        <div class="tech-item"><div class="tech-dot"></div>JavaScript</div>
+        <div class="tech-item"><div class="tech-dot"></div>HTML & CSS</div>
+        <div class="tech-item"><div class="tech-dot"></div>React</div>
+        <div class="tech-item"><div class="tech-dot"></div>Bootstrap</div>
+        <div class="tech-item"><div class="tech-dot"></div>Flask</div>
+        <div class="tech-item"><div class="tech-dot"></div>Python</div>
+        <!-- duplicate for seamless loop -->
+        <div class="tech-item"><div class="tech-dot"></div>C</div>
+        <div class="tech-item"><div class="tech-dot"></div>C++</div>
+        <div class="tech-item"><div class="tech-dot"></div>Java</div>
+        <div class="tech-item"><div class="tech-dot"></div>JavaScript</div>
+        <div class="tech-item"><div class="tech-dot"></div>HTML & CSS</div>
+        <div class="tech-item"><div class="tech-dot"></div>React</div>
+        <div class="tech-item"><div class="tech-dot"></div>Bootstrap</div>
+        <div class="tech-item"><div class="tech-dot"></div>Flask</div>
+        <div class="tech-item"><div class="tech-dot"></div>Python</div>
+      </div>
+    </div>
+    <div class="tech-marquee-row">
+      <div class="tech-marquee-inner reverse">
+        <div class="tech-item"><div class="tech-dot"></div>Git</div>
+        <div class="tech-item"><div class="tech-dot"></div>GitHub</div>
+        <div class="tech-item"><div class="tech-dot"></div>Netlify</div>
+        <div class="tech-item"><div class="tech-dot"></div>Postman</div>
+        <div class="tech-item"><div class="tech-dot"></div>Figma</div>
+        <div class="tech-item"><div class="tech-dot"></div>Canva</div>
+        <!-- duplicate for seamless loop -->
+        <div class="tech-item"><div class="tech-dot"></div>Git</div>
+        <div class="tech-item"><div class="tech-dot"></div>GitHub</div>
+        <div class="tech-item"><div class="tech-dot"></div>Netlify</div>
+        <div class="tech-item"><div class="tech-dot"></div>Postman</div>
+        <div class="tech-item"><div class="tech-dot"></div>Figma</div>
+        <div class="tech-item"><div class="tech-dot"></div>Canva</div>
+        <!-- duplicate for seamless loop -->
+        <div class="tech-item"><div class="tech-dot"></div>Git</div>
+        <div class="tech-item"><div class="tech-dot"></div>GitHub</div>
+        <div class="tech-item"><div class="tech-dot"></div>Netlify</div>
+        <div class="tech-item"><div class="tech-dot"></div>Postman</div>
+        <div class="tech-item"><div class="tech-dot"></div>Figma</div>
+        <div class="tech-item"><div class="tech-dot"></div>Canva</div>
+      </div>
+    </div>
+    <div class="tech-marquee-row">
+      <div class="tech-marquee-inner">
+        <div class="tech-item"><div class="tech-dot"></div>Firebase</div>
+        <div class="tech-item"><div class="tech-dot"></div>Supabase</div>
+        <div class="tech-item"><div class="tech-dot"></div>PostgreSQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>MySQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>SQLite</div>
+        <div class="tech-item"><div class="tech-dot"></div>NeonDB</div>
+        <!-- duplicate for seamless loop -->
+        <div class="tech-item"><div class="tech-dot"></div>Firebase</div>
+        <div class="tech-item"><div class="tech-dot"></div>Supabase</div>
+        <div class="tech-item"><div class="tech-dot"></div>PostgreSQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>MySQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>SQLite</div>
+        <div class="tech-item"><div class="tech-dot"></div>NeonDB</div>
+        <!-- duplicate for seamless loop -->
+        <div class="tech-item"><div class="tech-dot"></div>Firebase</div>
+        <div class="tech-item"><div class="tech-dot"></div>Supabase</div>
+        <div class="tech-item"><div class="tech-dot"></div>PostgreSQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>MySQL</div>
+        <div class="tech-item"><div class="tech-dot"></div>SQLite</div>
+        <div class="tech-item"><div class="tech-dot"></div>NeonDB</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <div class="certificates-section" id="certificates">
+    <h2>Certifications <span>&</span><br>Credentials</h2>
+    <div class="certificates-marquee-container">
+      <div class="certificates-marquee-inner">
+        <!-- Card 01 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">01</div>
+            <a href="certificates/Internship Completion Certificate_1706525163036.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Web Development Internship</h3>
+            <h4>Elewayte</h4>
+            <p>Successfully completed a full-time internship specializing in backend structures, Python scripts, and database schema mappings.</p>
+          </div>
+        </div>
+        <!-- Card 02 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">02</div>
+            <a href="certificates/DOC-20251123-WA0005..pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>The Joy of Computing using Python</h3>
+            <h4>NPTEL — IIT Madras</h4>
+            <p>Mastered computational logic, algorithm design, and data structures. Earned an elite final score.</p>
+          </div>
+        </div>
+        <!-- Card 03 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">03</div>
+            <a href="certificates/Certificate for Sanath K.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Python Programming</h3>
+            <h4>Elewayte</h4>
+            <p>Advanced module completion certificate covering clean scripting paradigms, data structures, and Python packages.</p>
+          </div>
+        </div>
+        <!-- Card 04 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">04</div>
+            <a href="certificates/1-0c9036ea-ed46-4d06-aa38-5f1d63e0f108 (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Data Structures & Algorithms</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Completed comprehensive curriculum covering computational complexity, trees, graphs, sorting/searching, and memory stacks.</p>
+          </div>
+        </div>
+        <!-- Card 05 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">05</div>
+            <a href="certificates/1-e4459c4f-9969-4f0e-a8a4-8af616a5fb1f (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Artificial Intelligence</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Learned core foundations of Artificial Intelligence, neural net structures, search strategies, and ML model training phases.</p>
+          </div>
+        </div>
+        <!-- Card 06 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">06</div>
+            <a href="certificates/1-d1f05572-35b2-4ff9-b3ac-bce371be0437 (2).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Programming Using C++</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Covered object-oriented programming paradigms, advanced memory pointer operations, templates, and STL utilities.</p>
+          </div>
+        </div>
+        <!-- Card 07 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">07</div>
+            <a href="certificates/1-4e108cd5-ef9b-42d0-9a3b-5715ecccc4a5 (2).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Linux for Beginners</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Gained competency in Linux shell commands, file systems, permissions, script logic, and operating system basics.</p>
+          </div>
+        </div>
+        <!-- Card 08 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">08</div>
+            <a href="certificates/WhatsApp Image 2026-05-22 at 3.19.27 PM.jpeg" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Docker & Kubernetes</h3>
+            <h4>Scaler Academy</h4>
+            <p>Completed professional masterclass on containerization fundamentals, cluster orchestration, and devops delivery pipelines.</p>
+          </div>
+        </div>
+        <!-- Card 09 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">09</div>
+            <a href="certificates/5GaVwoBhb5ncdq_copy.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>IEEEXtreme 19.0 Programming</h3>
+            <h4>IEEE SAC</h4>
+            <p>Successfully competed in the global 24-hour programming challenge as part of Team 'Shutdown' against 19,000+ competitors.</p>
+          </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">10</div>
+            <a href="certificates/WhatsApp Image 2026-05-22 at 3.19.27 PM (1).jpeg" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>CODE MANTHAN '25 Hackathon</h3>
+            <h4>VCET Puttur — AI & ML Student Branch</h4>
+            <p>Earned a Certificate of Participation with Team 'ERROR 404' in the intensive college-level AI/ML hackathon.</p>
+          </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">11</div>
+            <a href="certificates/Sanath K_CodeSphere_ A 24-Hour Global Level Codeathon (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>CodeSphere: 24-Hr Codeathon</h3>
+            <h4>B.M.S. College of Engineering</h4>
+            <p>Successfully participated in the international-level 24-hour coding challenge at Phase Shift 2025.</p>
+          </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">12</div>
+            <a href="certificates/Sanath K (3).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Anveshan 2025 Hackathon</h3>
+            <h4>IEEE Bangalore Section SAC</h4>
+            <p>Participated in Round 1 of the multi-domain hackathon demonstrating innovative software engineering prototypes.</p>
+          </div>
+        </div>
+        
+        <!-- DUPLICATE FOR SEAMLESS ENDLESS LOOP -->
+        <!-- Card 01 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">01</div>
+            <a href="certificates/Internship Completion Certificate_1706525163036.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Web Development Internship</h3>
+            <h4>Elewayte</h4>
+            <p>Successfully completed a full-time internship specializing in backend structures, Python scripts, and database schema mappings.</p>
+          </div>
+        </div>
+        <!-- Card 02 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">02</div>
+            <a href="certificates/DOC-20251123-WA0005..pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>The Joy of Computing using Python</h3>
+            <h4>NPTEL — IIT Madras</h4>
+            <p>Mastered computational logic, algorithm design, and data structures. Earned an elite final score.</p>
+          </div>
+        </div>
+        <!-- Card 03 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">03</div>
+            <a href="certificates/Certificate for Sanath K.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Python Programming</h3>
+            <h4>Elewayte</h4>
+            <p>Advanced module completion certificate covering clean scripting paradigms, data structures, and Python packages.</p>
+          </div>
+        </div>
+        <!-- Card 04 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">04</div>
+            <a href="certificates/1-0c9036ea-ed46-4d06-aa38-5f1d63e0f108 (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Data Structures & Algorithms</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Completed comprehensive curriculum covering computational complexity, trees, graphs, sorting/searching, and memory stacks.</p>
+          </div>
+        </div>
+        <!-- Card 05 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">05</div>
+            <a href="certificates/1-e4459c4f-9969-4f0e-a8a4-8af616a5fb1f (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Artificial Intelligence</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Learned core foundations of Artificial Intelligence, neural net structures, search strategies, and ML model training phases.</p>
+          </div>
+        </div>
+        <!-- Card 06 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">06</div>
+            <a href="certificates/1-d1f05572-35b2-4ff9-b3ac-bce371be0437 (2).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Programming Using C++</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Covered object-oriented programming paradigms, advanced memory pointer operations, templates, and STL utilities.</p>
+          </div>
+        </div>
+        <!-- Card 07 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">07</div>
+            <a href="certificates/1-4e108cd5-ef9b-42d0-9a3b-5715ecccc4a5 (2).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Linux for Beginners</h3>
+            <h4>Infosys Springboard</h4>
+            <p>Gained competency in Linux shell commands, file systems, permissions, script logic, and operating system basics.</p>
+          </div>
+        </div>
+        <!-- Card 08 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">08</div>
+            <a href="certificates/WhatsApp Image 2026-05-22 at 3.19.27 PM.jpeg" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Docker & Kubernetes</h3>
+            <h4>Scaler Academy</h4>
+            <p>Completed professional masterclass on containerization fundamentals, cluster orchestration, and devops delivery pipelines.</p>
+          </div>
+        </div>
+        <!-- Card 09 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">09</div>
+            <a href="certificates/5GaVwoBhb5ncdq_copy.pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>IEEEXtreme 19.0 Programming</h3>
+            <h4>IEEE SAC</h4>
+            <p>Successfully competed in the global 24-hour programming challenge as part of Team 'Shutdown' against 19,000+ competitors.</p>
+          </div>
+        </div>
+        <!-- Card 10 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">10</div>
+            <a href="certificates/WhatsApp Image 2026-05-22 at 3.19.27 PM (1).jpeg" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>CODE MANTHAN '25 Hackathon</h3>
+            <h4>VCET Puttur — AI & ML Student Branch</h4>
+            <p>Earned a Certificate of Participation with Team 'ERROR 404' in the intensive college-level AI/ML hackathon.</p>
+          </div>
+        </div>
+        <!-- Card 11 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">11</div>
+            <a href="certificates/Sanath K_CodeSphere_ A 24-Hour Global Level Codeathon (1).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>CodeSphere: 24-Hr Codeathon</h3>
+            <h4>B.M.S. College of Engineering</h4>
+            <p>Successfully participated in the international-level 24-hour coding challenge at Phase Shift 2025.</p>
+          </div>
+        </div>
+        <!-- Card 12 Duplicate -->
+        <div class="certificate-card">
+          <div class="cert-header">
+            <div class="cert-num">12</div>
+            <a href="certificates/Sanath K (3).pdf" target="_blank" class="cert-verify">Verify ↗</a>
+          </div>
+          <div class="cert-body">
+            <h3>Anveshan 2025 Hackathon</h3>
+            <h4>IEEE Bangalore Section SAC</h4>
+            <p>Participated in Round 1 of the multi-domain hackathon demonstrating innovative software engineering prototypes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="contact-section section-container" id="contact">
+    <div class="contact-container">
+      <h3>Contact</h3>
+      <div class="contact-flex">
+        <div class="contact-box">
+          <h4>Email</h4>
+          <p><a href="mailto:sanathk00007@gmail.com">sanathk00007@gmail.com</a></p>
+        </div>
+        <div class="contact-box">
+          <h4>Social</h4>
+          <a href="https://github.com/Sanath00007" target="_blank" class="contact-social">Github ↗</a>
+          <a href="https://linkedin.com/in/sanath-k-b69369291" target="_blank" class="contact-social">LinkedIn ↗</a>
+          <a href="https://leetcode.com/u/Sanath_K/" target="_blank" class="contact-social">LeetCode ↗</a>
+          <a href="https://www.skills.google/public_profiles/c0b5bbb6-6173-4927-9a32-f6c9a977853f" target="_blank" class="contact-social">Google Cloud ↗</a>
+          <a href="https://x.com/Sanath_00007" target="_blank" class="contact-social">Twitter ↗</a>
+          <a href="https://www.instagram.com/_sanath_07/" target="_blank" class="contact-social">Instagram ↗</a>
+        </div>
+        <div class="contact-box">
+          <h2>Designed and Developed<br>by <span>Sanath</span></h2>
+          <h5>© 2026</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
