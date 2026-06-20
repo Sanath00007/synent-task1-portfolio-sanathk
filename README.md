@@ -77,9 +77,6 @@ No installation or build tools required.
 - Fully responsive across desktop and mobile
 
 ## Screenshots
-
-> Add screenshots of the site (hero/loading screen, scroll-pin section, certificates section, mobile view, etc.) to a `/screenshots` folder in this repo and reference them here, e.g.:
->
 > ![Portfolio hero section](screenshots/hero.png)
 > ![projects-section](screenshots/projects.png)
 > ![skills-section](screenshots/skills.png)
